@@ -1,3 +1,5 @@
+using FileAPILesson.Application;
+using FileAPILesson.Infrastructure;
 
 namespace FileAPILesson.API
 {
@@ -13,6 +15,9 @@ namespace FileAPILesson.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddServicees();
+            builder.Services.AddContexts(builder.Configuration);
 
             var app = builder.Build();
 

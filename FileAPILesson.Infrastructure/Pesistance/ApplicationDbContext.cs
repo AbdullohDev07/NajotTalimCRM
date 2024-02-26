@@ -1,4 +1,5 @@
 ﻿using FileAPILesson.Domain;
+using FileAPILesson.Domain.Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace FileAPILesson.Infrastructure.Pesistance
             
         }
 
-        public DbSet<Picture> Images { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
     }
 }
